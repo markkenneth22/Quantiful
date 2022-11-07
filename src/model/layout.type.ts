@@ -5,3 +5,7 @@ export interface LayoutType {
     heading: string;
     widgets: WidgetType[];
 }
+
+export interface ConfigType {
+    columns: LayoutType[];
+}

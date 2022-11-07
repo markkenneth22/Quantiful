@@ -1,17 +1,18 @@
 import React from 'react';
 import { Box, Avatar, Typography, Grid, Zoom } from '@mui/material';
-import { WidgetType, PokemonSpeciesDetail, WidgetNumberResponseType } from '../../model';
-import useFetch from '../../utils/useFetch';
+import { WidgetType, PokemonSpeciesDetail, WidgetNumberResponseType } from 'model';
+import useFetch from 'utils/useFetch';
 import { styled } from '@mui/material/styles';
 
-const WidgetNumber = ({ api, title }: WidgetType) => {
-    const initialValue = {
-        id: 0,
-        name: '',
-        pokemon_species_details: []
-    };
+export const initialValueWidgetNumber = {
+    id: 0,
+    name: '',
+    pokemon_species_details: []
+};
 
-    const { data, loading } = useFetch<WidgetNumberResponseType>(api, initialValue);
+const WidgetNumber = ({ api, title }: WidgetType) => {
+
+    const { data, loading } = useFetch<WidgetNumberResponseType>(api, initialValueWidgetNumber);
 
     return (
         <Zoom in={!loading} style={{ transitionDelay: '100ms' }}>

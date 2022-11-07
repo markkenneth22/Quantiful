@@ -11,7 +11,10 @@ const useFetch = <T>(url: string, initialValue: T) => {
                 setData(data);
                 setLoading(false);
             })
-            .catch((error) => console.log(error));
+            .catch((error) => {
+                setLoading(false);
+                console.log(error);
+            });
     }, [url]);
     return { loading, data };
 };

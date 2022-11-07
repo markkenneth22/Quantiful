@@ -1,14 +1,15 @@
 import React from 'react';
 import { Box, Chip, Grid, Divider, Typography, Zoom } from '@mui/material';
-import { WidgetType, WidgetListResponseType } from '../../model';
-import useFetch from '../../utils/useFetch';
+import { WidgetType, WidgetListResponseType } from 'model';
+import useFetch from 'utils/useFetch';
+
+export const initialValueWidgetList = {
+    count: 0,
+    results: [{ name: '', url: '' }]
+};
 
 const WidgetList = ({ api, title }: WidgetType) => {
-    const initialValue = {
-        count: 0,
-        results: [{ name: '', url: '' }]
-    };
-    const { data, loading } = useFetch<WidgetListResponseType>(api, initialValue);
+    const { data, loading } = useFetch<WidgetListResponseType>(api, initialValueWidgetList);
     return (
         <Zoom in={!loading}>
             <Grid item xs={12}>

@@ -25,7 +25,7 @@ const WidgetList = ({ api, title }: WidgetType) => {
                     </Box>
                     <Divider variant="middle" />
                     <Box sx={{ m: 2 }}>
-                        <Typography gutterBottom variant="body1">
+                        <Typography gutterBottom variant="body1" data-testid="widget-list-name">
                             List of {title}
                         </Typography>
                         <div>

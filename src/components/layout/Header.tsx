@@ -57,6 +57,7 @@ const Header = ({ widgets, heading }: LayoutType) => {
                     textOverflow: 'ellipsis',
                     fontWeight: 700
                 }}
+                data-testid="widget-heading"
             >
                 {heading}
             </Typography>

@@ -21,7 +21,7 @@ const WidgetNumber = ({ api, title }: WidgetType) => {
                         {title.split(' ').map((item) => item[0].toUpperCase())}
                     </Avatar>
                     <Typography variant="h3">{data.pokemon_species_details.length}</Typography>
-                    <Typography variant="h6" gutterBottom sx={{ fontWeight: '600' }}>
+                    <Typography variant="h6" gutterBottom sx={{ fontWeight: '600' }} data-testid="widget-number-name">
                         {title}
                     </Typography>
                 </CustomBox>

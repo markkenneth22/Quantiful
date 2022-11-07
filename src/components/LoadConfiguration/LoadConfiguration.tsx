@@ -3,7 +3,7 @@ import { Grid } from '@mui/material';
 import { WidgetDefault, WidgetNumber, WidgetList } from '../widgets';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Header from './Header';
+import Header from '../layout/Header';
 import { LayoutType, WidgetType, ConfigType } from '../../model';
 
 const Column = styled(Paper)(({ theme }) => ({
@@ -16,6 +16,7 @@ const Column = styled(Paper)(({ theme }) => ({
 }));
 
 const LoadConfiguration = ({ configuration }: { configuration: ConfigType }) => {
+    if (configuration.columns.length === 0) return <div>Invalid configuration</div>;
     return (
         <>
             {configuration.columns.map(({ heading, size, widgets }: LayoutType, configIndex) => (
@@ -37,7 +38,7 @@ const LoadConfiguration = ({ configuration }: { configuration: ConfigType }) => 
     );
 };
 
-export const WidgetMap = (index: number, widget: WidgetType) => ({
+const WidgetMap = (index: number, widget: WidgetType) => ({
     list: <WidgetList {...widget} key={index} />,
     number: <WidgetNumber {...widget} key={index} />
 });

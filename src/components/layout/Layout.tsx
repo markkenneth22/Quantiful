@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Link } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import { configuration } from '../../configuration';
-import { LoadConfiguration } from './LoadConfiguration';
+import { LoadConfiguration } from 'components/LoadConfiguration';
 
 const Layout = () => {
     return (

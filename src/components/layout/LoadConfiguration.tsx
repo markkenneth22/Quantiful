@@ -18,23 +18,21 @@ const Column = styled(Paper)(({ theme }) => ({
 const LoadConfiguration = ({ configuration }: { configuration: ConfigType }) => {
     return (
         <>
-            {
-                configuration.columns.map(({ heading, size, widgets }: LayoutType, configIndex) => (
-                    <Grid item xs={size * 2} sx={{ mt: '20px' }} key={configIndex}>
-                        <Column elevation={1}>
-                            <Header widgets={widgets} heading={heading} size={size} />
-                            <Grid container spacing={2} alignItems="stretch" sx={{ mt: '10px' }}>
-                                {widgets.map(
-                                    (widget, index) =>
-                                        WidgetMap(index, widget)[widget.type as keyof typeof WidgetMap] ?? (
-                                            <WidgetDefault key={index} />
-                                        )
-                                )}
-                            </Grid>
-                        </Column>
-                    </Grid>
-                ))
-            }
+            {configuration.columns.map(({ heading, size, widgets }: LayoutType, configIndex) => (
+                <Grid item xs={size * 2} sx={{ mt: '20px' }} key={configIndex}>
+                    <Column elevation={1}>
+                        <Header widgets={widgets} heading={heading} size={size} />
+                        <Grid container spacing={2} alignItems="stretch" sx={{ mt: '10px' }}>
+                            {widgets.map(
+                                (widget, index) =>
+                                    WidgetMap(index, widget)[widget.type as keyof typeof WidgetMap] ?? (
+                                        <WidgetDefault key={index} />
+                                    )
+                            )}
+                        </Grid>
+                    </Column>
+                </Grid>
+            ))}
         </>
     );
 };

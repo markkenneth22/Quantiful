@@ -1,7 +1,7 @@
 export interface WidgetType {
     title: string;
     subtitle?: string;
-    type: string;
+    type: 'list' | 'number';
     api: string;
 }
 

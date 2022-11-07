@@ -13,3 +13,33 @@ Run unit test
 ### `npm run build`
 
 Builds the app for Production
+
+### `Project Structure`
+
+```
+node_modules/
+public/
+src/
+├─ __tests__/                      : Containes unit test for useFetch and LoadConfiguration components only
+├─ components/                     :
+│  ├─ layout/                      : Layout of the App
+│  ├─ LoadConfiguration/           : Component that is used to load the configuration file
+│  ├─ widgets/
+│  │  ├─ WidgetDefault.tsx         : Default Widget
+│  │  ├─ WidgetList.tsx            : Component that is be used for Widgets with a type 'list'
+│  │  ├─ WidgetNumber.tsx          : Component that is be used for Widgets with a type 'number'
+│  │  ├─ index.ts
+├─ model/
+│  ├─ index.ts
+│  ├─ layout.type.ts               : Types for layout
+│  ├─ widget.type.ts               : Types for widgets
+├─ testData/                       : Test data for unit test
+├─ utils/
+│  ├─ useFetch.ts                  : Custom hook for fetching data from an api
+├─ App.tsx
+README.md                          : Documentation for code structure, build, deployment
+tsconfig.json
+packlage.json
+jest.config.js
+.prettierrc
+```

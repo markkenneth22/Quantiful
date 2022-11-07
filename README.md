@@ -1,3 +1,14 @@
+### `Additional Tech Stack used`
+
+-   Material UI - used as the core UI library
+-   Axios
+-   Styled Components
+-   Create-react-app
+
+### `Live Demo`
+
+https://dynamic-dashboard-quantiful.vercel.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -43,10 +54,3 @@ packlage.json
 jest.config.js
 .prettierrc
 ```
-
-### `Additional Tech Stack used`
-
--   Material UI - used as the core UI library
--   Axios
--   Styled Components
--   Create-react-app

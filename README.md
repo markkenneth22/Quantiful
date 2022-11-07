@@ -20,8 +20,8 @@ Builds the app for Production
 node_modules/
 public/
 src/
-├─ __tests__/                      : Containes unit test for useFetch and LoadConfiguration components only
-├─ components/                     :
+├─ __tests__/                      : Contains unit test for useFetch and LoadConfiguration components only
+├─ components/
 │  ├─ layout/                      : Layout of the App
 │  ├─ LoadConfiguration/           : Component that is used to load the configuration file
 │  ├─ widgets/
@@ -43,3 +43,10 @@ packlage.json
 jest.config.js
 .prettierrc
 ```
+
+### `Additional Tech Stack used`
+
+-   Material UI - used as the core UI library
+-   Axios
+-   Styled Components
+-   Create-react-app

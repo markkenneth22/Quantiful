@@ -37,8 +37,8 @@ src/
 │  ├─ LoadConfiguration/           : Component that is used to load the configuration file
 │  ├─ widgets/
 │  │  ├─ WidgetDefault.tsx         : Default Widget
-│  │  ├─ WidgetList.tsx            : Component that is be used for Widgets with a type 'list'
-│  │  ├─ WidgetNumber.tsx          : Component that is be used for Widgets with a type 'number'
+│  │  ├─ WidgetList.tsx            : Component that will be used for Widgets with a type 'list'
+│  │  ├─ WidgetNumber.tsx          : Component that will be used for Widgets with a type 'number'
 │  │  ├─ index.ts
 ├─ model/
 │  ├─ index.ts
